@@ -1,0 +1,95 @@
+[VERSN2]
+
+add_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName}
+
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} Frontend vehicles
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} MODEL PUNTO
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} Pvehicle punto
+
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} AftermarketBodykit PUNTO_BODY_${BodyKit}
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} Base PUNTO_BASE
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} Driver PUNTO_DRIVER
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} FrontBrake PUNTO_FRONT_BRAKE
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} FrontLeftWindow PUNTO_FRONT_LEFT_WINDOW
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} FrontRightWindow PUNTO_FRONT_RIGHT_WINDOW
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} FrontWheel PUNTO_WHEEL
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} FrontWindow PUNTO_FRONT_WINDOW
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} Hood PUNTO_${BodyKit}_HOOD
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} Interior PUNTO_INTERIOR
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} LeftBrakelight PUNTO_LEFT_BRAKELIGHT
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} LeftBrakelightGlass PUNTO_LEFT_BRAKELIGHT_GLASS
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} LeftHeadlight PUNTO_LEFT_HEADLIGHT
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} LeftHeadlightGlass PUNTO_LEFT_HEADLIGHT_GLASS
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} LeftSideMirror PUNTO_LEFT_SIDE_MIRROR
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} LicensePlate LICENSE_PLATE_STYLE01
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} RearBrake PUNTO_REAR_BRAKE
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} RearLeftWindow PUNTO_REAR_LEFT_WINDOW
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} RearRightWindow PUNTO_REAR_RIGHT_WINDOW
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} RearWindow PUNTO_REAR_WINDOW
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} RightBrakelight PUNTO_RIGHT_BRAKELIGHT
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} RightBrakelightGlass PUNTO_RIGHT_BRAKELIGHT_GLASS
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} RightHeadlight PUNTO_RIGHT_HEADLIGHT
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} RightHeadlightGlass PUNTO_RIGHT_HEADLIGHT_GLASS
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} RightSideMirror PUNTO_RIGHT_SIDE_MIRROR
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} RoofScoop ROOF_STYLE00
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} Spoiler PUNTO_SPOILER
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} UniversalSpoilerBase PUNTO_UNIVERSAL_SPOILER_BASE
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} WindshieldTint WINDOW_TINT_STOCK
+
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} BaseKit KIT_DAMAGES DamageBody PUNTO_DAMAGE_0_BODY
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} BaseKit KIT_DAMAGES DamageBushguard PUNTO_DAMAGE_0_BUSHGUARD
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} BaseKit KIT_DAMAGES DamageCopLights PUNTO_DAMAGE_0_COP_LIGHTS
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} BaseKit KIT_DAMAGES DamageCopSpoiler PUNTO_DAMAGE_0_COP_SPOILER
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} BaseKit KIT_DAMAGES DamageFrontBumper PUNTO_DAMAGE_0_FRONT_BUMPER
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} BaseKit KIT_DAMAGES DamageFrontLeftWindow PUNTO_DAMAGE_0_FRONT_LEFT_WINDOW
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} BaseKit KIT_DAMAGES DamageFrontRightWindow PUNTO_DAMAGE_0_FRONT_RIGHT_WINDOW
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} BaseKit KIT_DAMAGES DamageFrontWheel PUNTO_DAMAGE_0_FRONT_WHEEL
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} BaseKit KIT_DAMAGES DamageFrontWindow PUNTO_DAMAGE_0_FRONT_WINDOW
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} BaseKit KIT_DAMAGES DamageHood PUNTO_DAMAGE_0_HOOD
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} BaseKit KIT_DAMAGES DamageLeftBrakelight PUNTO_DAMAGE_0_LEFT_BRAKELIGHT
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} BaseKit KIT_DAMAGES DamageLeftDoor PUNTO_DAMAGE_0_LEFT_DOOR
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} BaseKit KIT_DAMAGES DamageLeftHeadlight PUNTO_DAMAGE_0_LEFT_HEADLIGHT
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} BaseKit KIT_DAMAGES DamageLeftRearDoor PUNTO_DAMAGE_0_REAR_DOOR
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} BaseKit KIT_DAMAGES DamageRearBumper PUNTO_DAMAGE_0_REAR_BUMPER
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} BaseKit KIT_DAMAGES DamageRearLeftWindow PUNTO_DAMAGE_0_REAR_LEFT_WINDOW
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} BaseKit KIT_DAMAGES DamageRearRightWindow PUNTO_DAMAGE_0_REAR_RIGHT_WINDOW
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} BaseKit KIT_DAMAGES DamageRightBrakelight PUNTO_DAMAGE_0_RIGHT_BRAKELIGHT
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} BaseKit KIT_DAMAGES DamageRightDoor PUNTO_DAMAGE_0_RIGHT_DOOR
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} BaseKit KIT_DAMAGES DamageRightHeadlight PUNTO_DAMAGE_0_RIGHT_HEADLIGHT
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} BaseKit KIT_DAMAGES DamageRightRearDoor PUNTO_DAMAGE_0_RIGHT_REAR_DOOR
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} BaseKit KIT_DAMAGES DamageTrunk PUNTO_DAMAGE_0_TRUNK
+
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} BaseKit ZERO_DAMAGES ZeroDamageFront PUNTO_${BodyKit}_DAMAGE0_FRONT
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} BaseKit ZERO_DAMAGES ZeroDamageFrontLeft PUNTO_${BodyKit}_DAMAGE0_FRONTLEFT
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} BaseKit ZERO_DAMAGES ZeroDamageFrontRight PUNTO_${BodyKit}_DAMAGE0_FRONTRIGHT
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} BaseKit ZERO_DAMAGES ZeroDamageRear PUNTO_${BodyKit}_DAMAGE0_REAR
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} BaseKit ZERO_DAMAGES ZeroDamageRearLeft PUNTO_${BodyKit}_DAMAGE0_REARLEFT
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} BaseKit ZERO_DAMAGES ZeroDamageRearRight PUNTO_${BodyKit}_DAMAGE0_REARRIGHT
+
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} BaseKit ATTACHMENTS Attachment0 PUNTO_ATTACHMENT0
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} BaseKit ATTACHMENTS Attachment1 PUNTO_ATTACHMENT1
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} BaseKit ATTACHMENTS Attachment2 PUNTO_ATTACHMENT2
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} BaseKit ATTACHMENTS Attachment3 PUNTO_ATTACHMENT3
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} BaseKit ATTACHMENTS Attachment4 PUNTO_ATTACHMENT4
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} BaseKit ATTACHMENTS Attachment5 PUNTO_ATTACHMENT5
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} BaseKit ATTACHMENTS Attachment6 PUNTO_ATTACHMENT6
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} BaseKit ATTACHMENTS Attachment7 PUNTO_ATTACHMENT7
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} BaseKit ATTACHMENTS Attachment8 PUNTO_ATTACHMENT8
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} BaseKit ATTACHMENTS Attachment9 PUNTO_ATTACHMENT9
+
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} BaseKit DECAL_SIZES DecalFrontWindow PUNTO_DECAL_FRONT_WINDOW_WIDE_MEDIUM
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} BaseKit DECAL_SIZES DecalLeftDoor PUNTO_${BodyKit}_DECAL_LEFT_DOOR_RECT_MEDIUM
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} BaseKit DECAL_SIZES DecalLeftQuarter PUNTO_${BodyKit}_DECAL_LEFT_QUARTER_RECT_MEDIUM
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} BaseKit DECAL_SIZES DecalRearWindow PUNTO_DECAL_REAR_WINDOW_WIDE_MEDIUM
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} BaseKit DECAL_SIZES DecalRightDoor PUNTO_${BodyKit}_DECAL_RIGHT_DOOR_RECT_MEDIUM
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} BaseKit DECAL_SIZES DecalRightQuarter PUNTO_${BodyKit}_DECAL_RIGHT_QUARTER_RECT_MEDIUM
+
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} Visuals VISUAL_SETS BasePaintType GLOSS_L1_COLOR01
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} Visuals VISUAL_SETS VinylColor0 VINYL_L1_COLOR01
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} Visuals VISUAL_SETS VinylColor1 VINYL_L1_COLOR03
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} Visuals VISUAL_SETS VinylColor3 VINYL_L1_COLOR01
+
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} Visuals HUD CustomHUD STOCK
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} Visuals HUD HUDBackingColor ORANGE
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} Visuals HUD HUDCharacterColor WHITE
+update_collection GLOBAL\GLOBALB.LZC PresetRides ${PresetRideName} Visuals HUD HUDNeedleColor ORANGE
