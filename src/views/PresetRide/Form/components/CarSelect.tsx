@@ -1,28 +1,35 @@
-import { Select } from "@mantine/core";
-import React, { useContext, useMemo } from "react";
-import { PresetRideContext } from "../../../../contexts/PresetRideProvider";
+import { Select } from '@mantine/core';
+import React, { useContext, useMemo } from 'react';
+import { PresetRideContext } from '../../../../contexts/PresetRideProvider';
 
-import { cars, ICarMW } from "../../../../games/mostwanted/cars";
+import { cars, ICarMW } from '../../../../games/mostwanted/cars';
 
-const CarSelect = () => {
-  const { car, update } = useContext(PresetRideContext);
+const CarSelect = (props: { value: any; onChange: any }) => {
+	const { value, onChange } = props;
+	console.log(value);
+	const data = useMemo(
+		() =>
+			cars.map((car) => {
+				return { value: car.data.model, label: `${car.brand} ${car.model}` };
+			}),
+		[cars]
+	);
 
-  const data = useMemo(
-    () =>
-      cars.map((car) => {
-        return { value: car.data.model, label: `${car.brand} ${car.model}` };
-      }),
-    [cars]
-  );
+	const handleChange = (value: string) => {
+		const newCar = cars.find((car) => car.data.model === value);
+		if (!newCar) return;
 
-  const handleChange = (value: string) => {
-    const newCar = cars.find((car) => car.data.model === value);
-    if (!newCar) return;
+		onChange(newCar);
+	};
 
-    update.car(newCar);
-  };
-
-  return <Select label="Car" data={data} defaultValue={car?.data?.model} onChange={handleChange} />;
+	return (
+		<Select
+			label="Car"
+			data={data}
+			defaultValue={value.data.model}
+			onChange={handleChange}
+		/>
+	);
 };
 
 export default CarSelect;

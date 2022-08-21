@@ -1,20 +1,10 @@
-import React from "react";
-import { PresetRideProvider } from "../../../contexts/PresetRideProvider";
-import Form from "../Form/Form";
-import FormProvider from "../Form/FormProvider";
-import NavigationTabs from "../NavigationTabs/NavigationTabs";
+import React, { useEffect } from 'react';
+import { PresetRideProvider } from '../../../contexts/PresetRideProvider';
+import useStore from '../../../store';
+import NavigationTabs from '../NavigationTabs/NavigationTabs';
 
 const PresetRideMain = () => {
-  return (
-    <>
-      <NavigationTabs />
-      <PresetRideProvider>
-        <FormProvider>
-          <Form />
-        </FormProvider>
-      </PresetRideProvider>
-    </>
-  );
+	return <NavigationTabs />;
 };
 
 export default PresetRideMain;
