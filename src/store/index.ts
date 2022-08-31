@@ -111,28 +111,32 @@ type Store = {
 	patchPresetRide: (payload: IPresetRide) => void;
 };
 
-const useStore = create<Store>((set) => ({
-	presetRides: [],
-	addPresetRide: (payload) =>
-		set(
-			produce((draft) => {
-				draft.presetRides.push(createPresetRide(payload));
-			})
-		),
-	removePresetRide: (payload) =>
-		set(
-			produce((draft: Store) => {
-				const index = draft.presetRides.findIndex((el) => el.id === payload);
-				draft.presetRides.splice(index, 1);
-			})
-		),
-	patchPresetRide: (payload) =>
-		set(
-			produce((draft: Store) => {
-				const index = draft.presetRides.findIndex((el) => el.id === payload.id);
-				draft.presetRides.splice(index, 1, payload);
-			})
-		),
-}));
+const useStore = create<Store>(
+	persist((set) => ({
+		presetRides: [],
+		addPresetRide: (payload) =>
+			set(
+				produce((draft) => {
+					draft.presetRides.push(createPresetRide(payload));
+				})
+			),
+		removePresetRide: (payload) =>
+			set(
+				produce((draft: Store) => {
+					const index = draft.presetRides.findIndex((el) => el.id === payload);
+					draft.presetRides.splice(index, 1);
+				})
+			),
+		patchPresetRide: (payload) =>
+			set(
+				produce((draft: Store) => {
+					const index = draft.presetRides.findIndex(
+						(el) => el.id === payload.id
+					);
+					draft.presetRides.splice(index, 1, payload);
+				})
+			),
+	}))
+);
 
 export default useStore;
