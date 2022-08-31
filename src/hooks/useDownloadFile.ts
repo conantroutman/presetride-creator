@@ -1,84 +1,96 @@
 import React, { useContext } from 'react';
 import { PresetRideContext } from '../contexts/PresetRideProvider';
+import { ICarMW } from '../games/mostwanted/cars';
 import { IFormValues } from '../views/PresetRide/Form/interfaces';
 
 export const useDownloadFile = () => {
-  const { car } = useContext(PresetRideContext);
+	const downloadFile = (formValues: IFormValues) => {
+		const element = document.createElement('a');
+		element.setAttribute(
+			'href',
+			'data:text/plain;charset=utf-8,' + encodeURIComponent(endFile(formValues))
+		);
+		element.setAttribute('download', 'PresetRides.end');
 
-  const downloadFile = (formValues: IFormValues) => {
-    const element = document.createElement('a');
-    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(endFile(formValues)));
-    element.setAttribute('download', 'PresetRides.end');
+		element.style.display = 'none';
+		document.body.appendChild(element);
 
-    element.style.display = 'none';
-    document.body.appendChild(element);
+		element.click();
 
-    element.click();
+		document.body.removeChild(element);
+	};
 
-    document.body.removeChild(element);
-  };
+	const getSpoiler = (id: string, cf: boolean, car: ICarMW) => {
+		if (id === '0') return `${car.data.model}_SPOILER`;
 
-  const getSpoiler = (id: string, cf: boolean) => {
-    if (id === '0') return `${car.data.model}_SPOILER`;
+		const style = `SPOILER_STYLE${id.length === 1 ? '0' : ''}${id}`;
+		const carbon = cf ? '_CF' : '';
+		const type = car.data.spoilerType ? '_' + car.data.spoilerType : '';
 
-    const style = `SPOILER_STYLE${id.length === 1 ? '0' : ''}${id}`;
-    const carbon = cf ? '_CF' : '';
-    const type = car.data.spoilerType ? '_' + car.data.spoilerType : '';
+		return `${style}${type}${carbon}`;
+	};
 
-    return `${style}${type}${carbon}`;
-  };
+	const getHood = (hood: any) => {
+		if (hood.name === '0') return 'KIT00_HOOD';
 
-  const getHood = (hood: any) => {
-    if (hood.name === '0') return 'KIT00_HOOD';
+		const carbon = hood.cf ? '_CF' : '';
 
-    const carbon = hood.cf ? '_CF' : '';
+		return `STYLE${hood.name.length === 1 ? '0' : ''}${
+			hood.name
+		}_HOOD${carbon}`;
+	};
 
-    return `STYLE${hood.name.length === 1 ? '0' : ''}${hood.name}_HOOD${carbon}`;
-  };
+	const getRoofScoop = (id: string, cf: boolean, style: string) => {
+		if (id === '0') return 'ROOF_STYLE00';
 
-  const getRoofScoop = (id: string, cf: boolean, style: string) => {
-    if (id === '0') return 'ROOF_STYLE00';
+		const carbon = cf ? '_CF' : '';
+		const scoopStyle = style !== 'STOCK' ? `_${style}` : '';
 
-    const carbon = cf ? '_CF' : '';
-    const scoopStyle = style !== 'STOCK' ? `_${style}` : '';
+		return `ROOF_STYLE${id}${scoopStyle}${carbon}`;
+	};
 
-    return `ROOF_STYLE${id}${scoopStyle}${carbon}`;
-  };
+	const getRims = (rims: string, size: number, car: ICarMW) => {
+		if (rims === '0') return `${car.data.model}_WHEEL`;
 
-  const getRims = (rims: string, size: number) => {
-    if (rims === '0') return `${car.data.model}_WHEEL`;
+		return `${rims}_${size}_25`;
+	};
 
-    return `${rims}_${size}_25`;
-  };
+	const getDecalName = (decal: any) => {
+		if (decal?.name === '0') return `""`;
 
-  const getDecalName = (decal: any) => {
-    if (decal?.name === '0') return `""`;
+		return `${decal?.name}_${decal?.color}_DECAL`;
+	};
 
-    return `${decal?.name}_${decal?.color}_DECAL`;
-  };
+	const getVinyl = (vinyl: string) => {
+		if (vinyl === 'none') return `""`;
+		return vinyl;
+	};
 
-  const getVinyl = (vinyl: string) => {
-    if (vinyl === 'none') return `""`;
-    return vinyl;
-  };
+	const endFile = (formValues: IFormValues) => {
+		const presetRideName = formValues.name;
+		const carModel = formValues.car.data.model;
+		const pVehicle = formValues.car.data.pvehicle;
+		const bodyKit = `KIT0${formValues.bodyKit}`;
+		const spoiler = getSpoiler(
+			formValues.spoiler,
+			formValues.spoilerCF,
+			formValues.car
+		);
+		const hood = getHood(formValues.hood);
+		const roofScoop = getRoofScoop(
+			formValues.roofScoop,
+			formValues.roofScoopCF,
+			formValues.roofScoopStyle
+		);
+		const rims = getRims(formValues.rims, formValues.rimSize, formValues.car);
+		const paint = formValues.paint;
+		const rimPaint = formValues.rimPaint;
+		const windshieldTint = formValues.windshieldTint;
+		const vinyl = formValues.vinyl;
+		const decals = formValues.decals;
+		const vinylColors = formValues.vinylColors;
 
-  const endFile = (formValues: IFormValues) => {
-    const presetRideName = formValues.name;
-    const carModel = car.data.model;
-    const pVehicle = car.data.pvehicle;
-    const bodyKit = `KIT0${formValues.bodyKit}`;
-    const spoiler = getSpoiler(formValues.spoiler, formValues.spoilerCF);
-    const hood = getHood(formValues.hood);
-    const roofScoop = getRoofScoop(formValues.roofScoop, formValues.roofScoopCF, formValues.roofScoopStyle);
-    const rims = getRims(formValues.rims, formValues.rimSize);
-    const paint = formValues.paint;
-    const rimPaint = formValues.rimPaint;
-    const windshieldTint = formValues.windshieldTint;
-    const vinyl = formValues.vinyl;
-    const decals = formValues.decals;
-    const vinylColors = formValues.vinylColors;
-
-    const file = `\
+		const file = `\
 [VERSN2]
 
 add_collection GLOBAL\\GLOBALB.LZC PresetRides ${presetRideName}
@@ -166,53 +178,59 @@ update_collection GLOBAL\\GLOBALB.LZC PresetRides ${presetRideName} BaseKit DECA
 update_collection GLOBAL\\GLOBALB.LZC PresetRides ${presetRideName} BaseKit DECAL_SIZES DecalRightQuarter ${carModel}_${bodyKit}_DECAL_RIGHT_QUARTER_RECT_MEDIUM
 
 update_collection GLOBAL\\GLOBALB.LZC PresetRides ${presetRideName} Decals DECALS_FRONT_WINDOW DecalSlot0 ${getDecalName(
-      decals.windshieldFront
-    )}
+			decals.windshieldFront
+		)}
 update_collection GLOBAL\\GLOBALB.LZC PresetRides ${presetRideName} Decals DECALS_REAR_WINDOW DecalSlot0 ${getDecalName(
-      decals.windshieldRear
-    )}
+			decals.windshieldRear
+		)}
 update_collection GLOBAL\\GLOBALB.LZC PresetRides ${presetRideName} Decals DECALS_LEFT_DOOR DecalSlot0 ${getDecalName(
-      decals.doorL[0]
-    )}
+			decals.doorL[0]
+		)}
 update_collection GLOBAL\\GLOBALB.LZC PresetRides ${presetRideName} Decals DECALS_LEFT_DOOR DecalSlot1 ${getDecalName(
-      decals.doorL[1]
-    )}
+			decals.doorL[1]
+		)}
 update_collection GLOBAL\\GLOBALB.LZC PresetRides ${presetRideName} Decals DECALS_LEFT_DOOR DecalSlot2 ${getDecalName(
-      decals.doorL[2]
-    )}
+			decals.doorL[2]
+		)}
 update_collection GLOBAL\\GLOBALB.LZC PresetRides ${presetRideName} Decals DECALS_LEFT_DOOR DecalSlot3 ${getDecalName(
-      decals.doorL[3]
-    )}
+			decals.doorL[3]
+		)}
 update_collection GLOBAL\\GLOBALB.LZC PresetRides ${presetRideName} Decals DECALS_LEFT_DOOR DecalSlot4 ${getDecalName(
-      decals.doorL[4]
-    )}
+			decals.doorL[4]
+		)}
 update_collection GLOBAL\\GLOBALB.LZC PresetRides ${presetRideName} Decals DECALS_RIGHT_DOOR DecalSlot0 ${getDecalName(
-      decals.doorR[0]
-    )}
+			decals.doorR[0]
+		)}
 update_collection GLOBAL\\GLOBALB.LZC PresetRides ${presetRideName} Decals DECALS_RIGHT_DOOR DecalSlot1 ${getDecalName(
-      decals.doorR[1]
-    )}
+			decals.doorR[1]
+		)}
 update_collection GLOBAL\\GLOBALB.LZC PresetRides ${presetRideName} Decals DECALS_RIGHT_DOOR DecalSlot2 ${getDecalName(
-      decals.doorR[2]
-    )}
+			decals.doorR[2]
+		)}
 update_collection GLOBAL\\GLOBALB.LZC PresetRides ${presetRideName} Decals DECALS_RIGHT_DOOR DecalSlot3 ${getDecalName(
-      decals.doorR[3]
-    )}
+			decals.doorR[3]
+		)}
 update_collection GLOBAL\\GLOBALB.LZC PresetRides ${presetRideName} Decals DECALS_RIGHT_DOOR DecalSlot4 ${getDecalName(
-      decals.doorR[4]
-    )}
+			decals.doorR[4]
+		)}
 update_collection GLOBAL\\GLOBALB.LZC PresetRides ${presetRideName} Decals DECALS_LEFT_QUARTER DecalSlot0 ${getDecalName(
-      decals.quarterPanelL
-    )}
+			decals.quarterPanelL
+		)}
 update_collection GLOBAL\\GLOBALB.LZC PresetRides ${presetRideName} Decals DECALS_RIGHT_QUARTER DecalSlot0 ${getDecalName(
-      decals.quarterPanelR
-    )}
+			decals.quarterPanelR
+		)}
 
 update_collection GLOBAL\\GLOBALB.LZC PresetRides ${presetRideName} Visuals VISUAL_SETS BasePaintType ${paint}
 update_collection GLOBAL\\GLOBALB.LZC PresetRides ${presetRideName} Visuals VISUAL_SETS RimsPaintType ${rimPaint}
-update_collection GLOBAL\\GLOBALB.LZC PresetRides ${presetRideName} Visuals VISUAL_SETS VinylColor0 ${vinylColors[0]}
-update_collection GLOBAL\\GLOBALB.LZC PresetRides ${presetRideName} Visuals VISUAL_SETS VinylColor1 ${vinylColors[1]}
-update_collection GLOBAL\\GLOBALB.LZC PresetRides ${presetRideName} Visuals VISUAL_SETS VinylColor3 ${vinylColors[2]}
+update_collection GLOBAL\\GLOBALB.LZC PresetRides ${presetRideName} Visuals VISUAL_SETS VinylColor0 ${
+			vinylColors[0]
+		}
+update_collection GLOBAL\\GLOBALB.LZC PresetRides ${presetRideName} Visuals VISUAL_SETS VinylColor1 ${
+			vinylColors[1]
+		}
+update_collection GLOBAL\\GLOBALB.LZC PresetRides ${presetRideName} Visuals VISUAL_SETS VinylColor3 ${
+			vinylColors[2]
+		}
 update_collection GLOBAL\\GLOBALB.LZC PresetRides ${presetRideName} Visuals VISUAL_SETS VinylLayer ${vinyl}
 
 update_collection GLOBAL\\GLOBALB.LZC PresetRides ${presetRideName} Visuals HUD CustomHUD STOCK
@@ -221,10 +239,10 @@ update_collection GLOBAL\\GLOBALB.LZC PresetRides ${presetRideName} Visuals HUD 
 update_collection GLOBAL\\GLOBALB.LZC PresetRides ${presetRideName} Visuals HUD HUDNeedleColor ORANGE\
 `;
 
-    return file;
-  };
+		return file;
+	};
 
-  return {
-    downloadFile,
-  };
+	return {
+		downloadFile,
+	};
 };

@@ -25,11 +25,12 @@ import WindshieldTintSelect from './components/WindshieldTintSelect';
 import { FormContext } from './FormProvider';
 import { useUpdateEffect } from 'usehooks-ts';
 import NameInput from './components/NameInput';
+import { Download } from 'tabler-icons-react';
+import DownloadButton from './components/DownloadButton';
 
 const Form = () => {
 	const { form } = useContext(FormContext);
 	const { bodyKits } = usePartsData();
-	const { downloadFile } = useDownloadFile();
 	const store = useStore();
 
 	useUpdateEffect(() => {
@@ -38,45 +39,43 @@ const Form = () => {
 
 	return (
 		<Box sx={{ maxWidth: 600 }}>
-			<form>
-				<Stack>
-					<NameInput label="Name" {...form.getInputProps('name')} />
-					<CarSelect {...form.getInputProps('car')} />
-					<Accordion multiple defaultValue={['parts']}>
-						<Accordion.Item value="parts">
-							<Accordion.Control>Parts</Accordion.Control>
-							<Accordion.Panel>
-								<Select
-									label="Body Kit"
-									data={bodyKits}
-									{...form.getInputProps('bodyKit')}
-								/>
-								<PartHoodSelect />
-								<PartRoofScoopSelect />
-								<PartSpoilerSelect />
-								<PartRimsSelect />
-							</Accordion.Panel>
-						</Accordion.Item>
-						<Accordion.Item value="colors">
-							<Accordion.Control>Colors</Accordion.Control>
-							<Accordion.Panel>
-								<PaintSelect />
-								<RimPaintSelect />
-								<WindshieldTintSelect />
-							</Accordion.Panel>
-						</Accordion.Item>
-						<Accordion.Item value="decals">
-							<Accordion.Control>Decals</Accordion.Control>
-							<Accordion.Panel>
-								<VinylSelect />
-								<VinylColorSelect />
-								<Decals />
-							</Accordion.Panel>
-						</Accordion.Item>
-					</Accordion>
-					<Button type="submit">Download Script</Button>
-				</Stack>
-			</form>
+			<Stack>
+				<NameInput label="Name" {...form.getInputProps('name')} />
+				<CarSelect {...form.getInputProps('car')} />
+				<Accordion multiple defaultValue={['parts']}>
+					<Accordion.Item value="parts">
+						<Accordion.Control>Parts</Accordion.Control>
+						<Accordion.Panel>
+							<Select
+								label="Body Kit"
+								data={bodyKits}
+								{...form.getInputProps('bodyKit')}
+							/>
+							<PartHoodSelect />
+							<PartRoofScoopSelect />
+							<PartSpoilerSelect />
+							<PartRimsSelect />
+						</Accordion.Panel>
+					</Accordion.Item>
+					<Accordion.Item value="colors">
+						<Accordion.Control>Colors</Accordion.Control>
+						<Accordion.Panel>
+							<PaintSelect />
+							<RimPaintSelect />
+							<WindshieldTintSelect />
+						</Accordion.Panel>
+					</Accordion.Item>
+					<Accordion.Item value="decals">
+						<Accordion.Control>Decals</Accordion.Control>
+						<Accordion.Panel>
+							<VinylSelect />
+							<VinylColorSelect />
+							<Decals />
+						</Accordion.Panel>
+					</Accordion.Item>
+				</Accordion>
+				<DownloadButton />
+			</Stack>
 		</Box>
 	);
 };
