@@ -63,16 +63,19 @@ const NavigationTabs = () => {
 			store.presetRides.map((presetRide) => (
 				<Tabs.Panel value={presetRide.id}>
 					{activeTab === presetRide.id && (
-						<PresetRideProvider>
-							<FormProvider id={presetRide.id}>
-								<Form />
-							</FormProvider>
-						</PresetRideProvider>
+						<FormProvider id={presetRide.id}>
+							<Form />
+						</FormProvider>
 					)}
 				</Tabs.Panel>
 			)),
 		[store, activeTab]
 	);
+
+	useEffectOnce(() => {
+		if (store.presetRides.length === 0) return;
+		setActiveTab(store.presetRides[0].id);
+	});
 
 	return (
 		<Tabs
