@@ -6,7 +6,6 @@ import { cars, ICarMW } from '../../../../games/mostwanted/cars';
 
 const CarSelect = (props: { value: any; onChange: any }) => {
 	const { value, onChange } = props;
-	console.log(value);
 	const data = useMemo(
 		() =>
 			cars.map((car) => {
