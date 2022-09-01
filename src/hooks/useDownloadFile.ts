@@ -10,7 +10,7 @@ export const useDownloadFile = () => {
 			'href',
 			'data:text/plain;charset=utf-8,' + encodeURIComponent(endFile(formValues))
 		);
-		element.setAttribute('download', 'PresetRides.end');
+		element.setAttribute('download', `${formValues.name}.end`);
 
 		element.style.display = 'none';
 		document.body.appendChild(element);
