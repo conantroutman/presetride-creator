@@ -20,13 +20,15 @@ specifiers:
   '@types/react': ^18.0.17
   '@types/react-dom': ^18.0.6
   '@vitejs/plugin-react': ^2.0.1
-  '@vitejs/plugin-react-refresh': ^1.3.6
   autoprefixer: ^10.4.8
+  immer: ^9.0.15
   postcss: ^8.4.16
   react: ^18.2.0
   react-dom: ^18.2.0
+  react-router-dom: '6'
   tabler-icons-react: ^1.54.0
   typescript: ^4.7.4
+  usehooks-ts: ^2.6.0
   vite: ^3.0.7
   vite-plugin-svgr: ^2.2.1
   web-vitals: ^2.1.4
@@ -53,16 +55,18 @@ dependencies:
   '@types/react-dom': 18.0.6
   '@vitejs/plugin-react': 2.0.1_vite@3.0.7
   autoprefixer: 10.4.8_postcss@8.4.16
+  immer: 9.0.15
   postcss: 8.4.16
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  react-router-dom: 6.3.0_biqbaboplfbrettd7655fr4n2y
   tabler-icons-react: 1.54.0_react@18.2.0
   typescript: 4.7.4
+  usehooks-ts: 2.6.0_react@18.2.0
   web-vitals: 2.1.4
-  zustand: 4.0.0_react@18.2.0
+  zustand: 4.0.0_immer@9.0.15+react@18.2.0
 
 devDependencies:
-  '@vitejs/plugin-react-refresh': 1.3.6
   vite: 3.0.7
   vite-plugin-svgr: 2.2.1_vite@3.0.7
 
@@ -179,6 +183,7 @@ packages:
   /@babel/helper-plugin-utils/7.18.9:
     resolution: {integrity: sha512-aBXPT3bmtLryXaoJLyYPXPlSD4p1ld9aYeR+sJNOZjJJGiOpb+fKfh3NkcCu7J54nUJwCERPBExCCpyCOHnu/w==}
     engines: {node: '>=6.9.0'}
+    dev: false
 
   /@babel/helper-simple-access/7.18.6:
     resolution: {integrity: sha512-iNpIgTgyAvDQpDj76POqg+YEt8fPxx3yaNBg3S30dxNKm2SWfYhD0TGrK/Eu9wHpUW63VQU894TsTg+GLbUa1g==}
@@ -257,6 +262,7 @@ packages:
     dependencies:
       '@babel/core': 7.18.10
       '@babel/helper-plugin-utils': 7.18.9
+    dev: false
 
   /@babel/plugin-transform-react-jsx-source/7.18.6_@babel+core@7.18.10:
     resolution: {integrity: sha512-utZmlASneDfdaMh0m/WausbjUjEdGrQJz0vFK93d7wD3xf5wBtX219+q6IlCNZeguIcxS2f/CvLZrlLSvSHQXw==}
@@ -266,6 +272,7 @@ packages:
     dependencies:
       '@babel/core': 7.18.10
       '@babel/helper-plugin-utils': 7.18.9
+    dev: false
 
   /@babel/plugin-transform-react-jsx/7.18.10_@babel+core@7.18.10:
     resolution: {integrity: sha512-gCy7Iikrpu3IZjYZolFE4M1Sm+nrh1/6za2Ewj77Z+XirT4TsbJcvOFOyF+fRPwU6AKKK136CZxx6L8AbSFG6A==}
@@ -997,20 +1004,6 @@ packages:
       '@types/yargs-parser': 21.0.0
     dev: false
 
-  /@vitejs/plugin-react-refresh/1.3.6:
-    resolution: {integrity: sha512-iNR/UqhUOmFFxiezt0em9CgmiJBdWR+5jGxB2FihaoJfqGt76kiwaKoVOJVU5NYcDWMdN06LbyN2VIGIoYdsEA==}
-    engines: {node: '>=12.0.0'}
-    deprecated: This package has been deprecated in favor of @vitejs/plugin-react
-    dependencies:
-      '@babel/core': 7.18.10
-      '@babel/plugin-transform-react-jsx-self': 7.18.6_@babel+core@7.18.10
-      '@babel/plugin-transform-react-jsx-source': 7.18.6_@babel+core@7.18.10
-      '@rollup/pluginutils': 4.2.1
-      react-refresh: 0.10.0
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
   /@vitejs/plugin-react/2.0.1_vite@3.0.7:
     resolution: {integrity: sha512-uINzNHmjrbunlFtyVkST6lY1ewSfz/XwLufG0PIqvLGnpk2nOIOa/1CACTDNcKi1/RwaCzJLmsXwm1NsUVV/NA==}
     engines: {node: ^14.18.0 || >=16.0.0}
@@ -1526,10 +1519,20 @@ packages:
     dependencies:
       function-bind: 1.1.1
 
+  /history/5.3.0:
+    resolution: {integrity: sha512-ZqaKwjjrAYUYfLG+htGaIIZ4nioX2L70ZUMIFysS3xvBsSG4x/n1V6TXV3N8ZYNuFGlDirFg32T7B6WOUPDYcQ==}
+    dependencies:
+      '@babel/runtime': 7.18.9
+    dev: false
+
   /hoist-non-react-statics/3.3.2:
     resolution: {integrity: sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==}
     dependencies:
       react-is: 16.13.1
+    dev: false
+
+  /immer/9.0.15:
+    resolution: {integrity: sha512-2eB/sswms9AEUSkOm4SbV5Y7Vmt/bKRwByd52jfLkW4OLYeaTP3EEiJ9agqU0O/tq6Dk62Zfj+TJSqfm1rLVGQ==}
     dev: false
 
   /import-fresh/3.3.0:
@@ -1800,14 +1803,30 @@ packages:
     resolution: {integrity: sha512-xWGDIW6x921xtzPkhiULtthJHoJvBbF3q26fzloPCK0hsvxtPVelvftw3zjbHWSkR2km9Z+4uxbDDK/6Zw9B8w==}
     dev: false
 
-  /react-refresh/0.10.0:
-    resolution: {integrity: sha512-PgidR3wST3dDYKr6b4pJoqQFpPGNKDSCDx4cZoshjXipw3LzO7mG1My2pwEzz2JVkF+inx3xRpDeQLFQGH/hsQ==}
-    engines: {node: '>=0.10.0'}
-    dev: true
-
   /react-refresh/0.14.0:
     resolution: {integrity: sha512-wViHqhAd8OHeLS/IRMJjTSDHF3U9eWi62F/MledQGPdJGDhodXJ9PBLNGr6WWL7qlH12Mt3TyTpbS+hGXMjCzQ==}
     engines: {node: '>=0.10.0'}
+    dev: false
+
+  /react-router-dom/6.3.0_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-uaJj7LKytRxZNQV8+RbzJWnJ8K2nPsOOEuX7aQstlMZKQT0164C+X2w6bnkqU3sjtLvpd5ojrezAyfZ1+0sStw==}
+    peerDependencies:
+      react: '>=16.8'
+      react-dom: '>=16.8'
+    dependencies:
+      history: 5.3.0
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      react-router: 6.3.0_react@18.2.0
+    dev: false
+
+  /react-router/6.3.0_react@18.2.0:
+    resolution: {integrity: sha512-7Wh1DzVQ+tlFjkeo+ujvjSqSJmkt1+8JO+T5xklPlgrh70y7ogx75ODRW0ThWhY7S+6yEDks8TYrtQe/aoboBQ==}
+    peerDependencies:
+      react: '>=16.8'
+    dependencies:
+      history: 5.3.0
+      react: 18.2.0
     dev: false
 
   /react-textarea-autosize/8.3.4_ug65io7jkbhmo4fihdmbrh3ina:
@@ -2032,6 +2051,14 @@ packages:
       react: 18.2.0
     dev: false
 
+  /usehooks-ts/2.6.0_react@18.2.0:
+    resolution: {integrity: sha512-Kj/4oc2nOxRDGTDb2v1ZulF7+tpeXFuqI6cUesM0Vic7TPPDlFORxKh4ivsYg+NTvX/YbM+lhqqkfFTiIt23eg==}
+    peerDependencies:
+      react: '>=16.9.0'
+    dependencies:
+      react: 18.2.0
+    dev: false
+
   /vite-plugin-svgr/2.2.1_vite@3.0.7:
     resolution: {integrity: sha512-+EqwahbwjETJH/ssA/66dNYyKN1cO0AStq96MuXmq5maU7AePBMf2lDKfQna49tJZAjtRz+R899BWCsUUP45Fg==}
     peerDependencies:
@@ -2078,7 +2105,7 @@ packages:
     resolution: {integrity: sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==}
     engines: {node: '>= 6'}
 
-  /zustand/4.0.0_react@18.2.0:
+  /zustand/4.0.0_immer@9.0.15+react@18.2.0:
     resolution: {integrity: sha512-OrsfQTnRXF1LZ9/vR/IqN9ws5EXUhb149xmPjErZnUrkgxS/gAHGy2dPNIVkVvoxrVe1sIydn4JjF0dYHmGeeQ==}
     engines: {node: '>=12.7.0'}
     peerDependencies:
@@ -2090,6 +2117,7 @@ packages:
       react:
         optional: true
     dependencies:
+      immer: 9.0.15
       react: 18.2.0
       use-sync-external-store: 1.2.0_react@18.2.0
     dev: false
