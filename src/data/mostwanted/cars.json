@@ -1,0 +1,371 @@
+[
+	{
+		"brand": "Aston Martin",
+		"model": "DB9",
+		"data": {
+			"frontend": "db9",
+			"model": "DB9",
+			"pvehicle": "db9"
+		}
+	},
+	{
+		"brand": "Audi",
+		"model": "A3 3.2 quattro",
+		"data": {
+			"frontend": "a3",
+			"model": "A3",
+			"pvehicle": "a3",
+			"spoilerType": "SpoilerTypes.Hatch"
+		}
+	},
+	{
+		"brand": "Audi",
+		"model": "A4 3.2 FSI quattro",
+		"data": {
+			"frontend": "a4",
+			"model": "A4",
+			"pvehicle": "a4"
+		}
+	},
+	{
+		"brand": "Audi",
+		"model": "TT 3.2 quattro",
+		"data": {
+			"frontend": "tt",
+			"model": "TT",
+			"pvehicle": "tt",
+			"spoilerType": "SpoilerTypes.Porsche"
+		}
+	},
+	{
+		"brand": "BMW",
+		"model": "M3 GTR",
+		"data": {
+			"frontend": "m3_gtre46",
+			"model": "BMWM3GTRE46",
+			"pvehicle": "bmwm3gtre46",
+			"bodyKits": 0
+		}
+	},
+	{
+		"brand": "BMW",
+		"model": "M3 GTR Street",
+		"data": {
+			"frontend": "m3_gtr",
+			"model": "BMWM3GTR",
+			"pvehicle": "bmwm3gtr",
+			"bodyKits": 0
+		}
+	},
+	{
+		"brand": "Cadillac",
+		"model": "CTS",
+		"data": {
+			"frontend": "cts",
+			"model": "CTS",
+			"pvehicle": "cts",
+			"bodyKits": 4
+		}
+	},
+	{
+		"brand": "Chevrolet",
+		"model": "Camaro SS",
+		"data": {
+			"frontend": "camaro",
+			"model": "CAMARO",
+			"pvehicle": "camaro",
+			"bodyKits": 0
+		}
+	},
+	{
+		"brand": "Chevrolet",
+		"model": "Cobalt SS",
+		"data": {
+			"frontend": "cobaltss",
+			"model": "COBALTSS",
+			"pvehicle": "cobaltss"
+		}
+	},
+	{
+		"brand": "Chevrolet",
+		"model": "Corvette C6",
+		"data": {
+			"frontend": "corvette_car",
+			"model": "CORVETTE",
+			"pvehicle": "corvette",
+			"bodyKits": 4
+		}
+	},
+	{
+		"brand": "Chevrolet",
+		"model": "Corvette C6.R",
+		"data": {
+			"frontend": "corvettec6r",
+			"model": "CORVETTEC6R",
+			"pvehicle": "corvettec6r",
+			"bodyKits": 0
+		}
+	},
+	{
+		"brand": "Dodge",
+		"model": "Viper SRT 10",
+		"data": {
+			"frontend": "viper",
+			"model": "VIPER",
+			"pvehicle": "viper",
+			"bodyKits": 4
+		}
+	},
+	{
+		"brand": "Fiat",
+		"model": "Punto",
+		"data": {
+			"frontend": "punto",
+			"model": "PUNTO",
+			"pvehicle": "punto",
+			"spoilerType": "SpoilerTypes.Hatch",
+			"bodyKits": 4
+		}
+	},
+	{
+		"brand": "Ford",
+		"model": "GT",
+		"data": {
+			"frontend": "fordgt",
+			"model": "FORDGT",
+			"pvehicle": "fordgt",
+			"bodyKits": 2
+		}
+	},
+	{
+		"brand": "Ford",
+		"model": "Mustang GT",
+		"data": {
+			"frontend": "mustanggt",
+			"model": "MUSTANGGT",
+			"pvehicle": "mustanggt"
+		}
+	},
+	{
+		"brand": "Lamborghini",
+		"model": "Gallardo",
+		"data": {
+			"frontend": "gallardo",
+			"model": "GALLARDO",
+			"pvehicle": "gallardo",
+			"bodyKits": 4
+		}
+	},
+	{
+		"brand": "Lamborghini",
+		"model": "Murciélago",
+		"data": {
+			"frontend": "murcielago",
+			"model": "MURCIELAGO",
+			"pvehicle": "murcielago",
+			"bodyKits": 2
+		}
+	},
+	{
+		"brand": "Lexus",
+		"model": "IS 300",
+		"data": {
+			"frontend": "is300",
+			"model": "IS300",
+			"pvehicle": "is300",
+			"bodyKits": 4
+		}
+	},
+	{
+		"brand": "Lotus",
+		"model": "Elise",
+		"data": {
+			"frontend": "elise",
+			"model": "ELISE",
+			"pvehicle": "elise"
+		}
+	},
+	{
+		"brand": "Mazda",
+		"model": "RX-7",
+		"data": {
+			"frontend": "rx7",
+			"model": "RX7",
+			"pvehicle": "rx7"
+		}
+	},
+	{
+		"brand": "Mazda",
+		"model": "RX-8",
+		"data": {
+			"frontend": "rx8",
+			"model": "RX8",
+			"pvehicle": "rx8"
+		}
+	},
+	{
+		"brand": "Mercedes-Benz",
+		"model": "CLK 500",
+		"data": {
+			"frontend": "clk500",
+			"model": "CLK500",
+			"pvehicle": "clk500"
+		}
+	},
+	{
+		"brand": "Mercedes-Benz",
+		"model": "SL 500",
+		"data": {
+			"frontend": "sl500",
+			"model": "SL500",
+			"pvehicle": "sl500"
+		}
+	},
+	{
+		"brand": "Mercedes-Benz",
+		"model": "SL 65 AMG",
+		"data": {
+			"frontend": "sl65",
+			"model": "SL65",
+			"pvehicle": "sl65",
+			"bodyKits": 0
+		}
+	},
+	{
+		"brand": "Mercedes-Benz",
+		"model": "SLR McLaren",
+		"data": {
+			"frontend": "slr",
+			"model": "SLR",
+			"pvehicle": "slr",
+			"bodyKits": 2
+		}
+	},
+	{
+		"brand": "Mitsubishi",
+		"model": "Eclipse GT",
+		"data": {
+			"frontend": "eclipsegt",
+			"model": "ECLIPSEGT",
+			"pvehicle": "eclipsegt"
+		}
+	},
+	{
+		"brand": "Mitsubishi",
+		"model": "Lancer Evolution VIII",
+		"data": {
+			"frontend": "lancerevo8",
+			"model": "LANCEREVO8",
+			"pvehicle": "lancerevo8"
+		}
+	},
+	{
+		"brand": "Pontiac",
+		"model": "GTO",
+		"data": {
+			"frontend": "gto",
+			"model": "GTO",
+			"pvehicle": "gto"
+		}
+	},
+	{
+		"brand": "Porsche",
+		"model": "911 Carrera S",
+		"data": {
+			"frontend": "997s",
+			"model": "997S",
+			"pvehicle": "997s",
+			"spoilerType": "SpoilerTypes.Porsche"
+		}
+	},
+	{
+		"brand": "Porsche",
+		"model": "911 GT2",
+		"data": {
+			"frontend": "911gt2",
+			"model": "911GT2",
+			"pvehicle": "911gt2",
+			"spoilerType": "SpoilerTypes.Porsche",
+			"bodyKits": 0
+		}
+	},
+	{
+		"brand": "Porsche",
+		"model": "911 Turbo S",
+		"data": {
+			"frontend": "911turbo",
+			"model": "911TURBO",
+			"pvehicle": "911turbo",
+			"spoilerType": "SpoilerTypes.Porsche",
+			"bodyKits": 4
+		}
+	},
+	{
+		"brand": "Porsche",
+		"model": "Carrera GT",
+		"data": {
+			"frontend": "carreragt",
+			"model": "CARRERAGT",
+			"pvehicle": "carreragt",
+			"bodyKits": 2
+		}
+	},
+	{
+		"brand": "Porsche",
+		"model": "Cayman S",
+		"data": {
+			"frontend": "caymans",
+			"model": "CAYMANS",
+			"pvehicle": "caymans",
+			"spoilerType": "SpoilerTypes.Porsche"
+		}
+	},
+	{
+		"brand": "Renault",
+		"model": "Clio V6",
+		"data": {
+			"frontend": "clio",
+			"model": "CLIO",
+			"pvehicle": "clio",
+			"spoilerType": "SpoilerTypes.Hatch"
+		}
+	},
+	{
+		"brand": "Subaru",
+		"model": "Impreza WRX STi",
+		"data": {
+			"frontend": "imprezawrx",
+			"model": "IMPREZAWRX",
+			"pvehicle": "imprezawrx"
+		}
+	},
+	{
+		"brand": "Toyota",
+		"model": "Supra",
+		"data": {
+			"frontend": "supra",
+			"model": "SUPRA",
+			"pvehicle": "supra"
+		}
+	},
+	{
+		"brand": "Vauxhall",
+		"model": "Monaro VXR",
+		"data": {
+			"frontend": "monaro",
+			"model": "MONARO",
+			"pvehicle": "monaro"
+		}
+	},
+	{
+		"brand": "Volkswagen",
+		"model": "Golf GTI",
+		"data": {
+			"frontend": "gti",
+			"model": "GTI",
+			"pvehicle": "gti",
+			"spoilerType": "SpoilerTypes.Hatch",
+			"bodyKits": 4
+		}
+	}
+]
