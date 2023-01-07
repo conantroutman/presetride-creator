@@ -46,7 +46,7 @@ export const useDownloadFile = () => {
 		const carbon = cf ? '_CF' : '';
 		const scoopStyle = style !== 'STOCK' ? `_${style}` : '';
 
-		return `ROOF_STYLE${id}${scoopStyle}${carbon}`;
+		return `ROOF_STYLE${id.length > 1 ? id : '0' + id}${scoopStyle}${carbon}`;
 	};
 
 	const getRims = (rims: string, size: number, car: ICarMW) => {
@@ -86,7 +86,7 @@ export const useDownloadFile = () => {
 		const paint = formValues.paint;
 		const rimPaint = formValues.rimPaint;
 		const windshieldTint = formValues.windshieldTint;
-		const vinyl = formValues.vinyl;
+		const vinyl = formValues.vinyl ?? `""`;
 		const decals = formValues.decals;
 		const vinylColors = formValues.vinylColors;
 
