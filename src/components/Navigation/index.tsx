@@ -6,7 +6,7 @@ function Navigation() {
 	const location = useLocation();
 
 	return (
-		<Navbar width={{ base: 300 }} height={500} p="xs">
+		<Navbar width={{ base: 300 }} height="100%" p="xs">
 			<NavLink
 				label="Most Wanted"
 				opened={location.pathname.includes('most-wanted')}
