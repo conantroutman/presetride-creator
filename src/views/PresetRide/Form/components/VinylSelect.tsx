@@ -39,7 +39,7 @@ const VinylSelect = () => {
 
 	const data = useMemo(() => {
 		if (category === 'none') {
-			//form.setFieldValue('vinyl', `""`);
+			form.setFieldValue('vinyl', `""`);
 			return [];
 		}
 
