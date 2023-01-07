@@ -51,6 +51,7 @@ const NavigationTabs = () => {
 							}}
 						/>
 					}
+					key={presetRide.id + '-tab'}
 				>
 					{presetRide.name}
 				</Tabs.Tab>
@@ -61,7 +62,7 @@ const NavigationTabs = () => {
 	const panels = useMemo(
 		() =>
 			store.presetRides.map((presetRide) => (
-				<Tabs.Panel value={presetRide.id}>
+				<Tabs.Panel value={presetRide.id} key={presetRide.id + '-panel'}>
 					{activeTab === presetRide.id && (
 						<FormProvider id={presetRide.id}>
 							<Form />
