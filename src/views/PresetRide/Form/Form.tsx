@@ -1,14 +1,5 @@
-import {
-	Accordion,
-	Box,
-	Button,
-	Select,
-	Stack,
-	TextInput,
-} from '@mantine/core';
-import { useForm } from '@mantine/form';
-import React, { useContext, useEffect } from 'react';
-import { useDownloadFile } from '../../../hooks/useDownloadFile';
+import { Accordion, Box, Container, Select, Stack } from '@mantine/core';
+import React, { useContext } from 'react';
 import usePartsData from '../../../hooks/usePartsData';
 import useStore from '../../../store';
 import CarSelect from './components/CarSelect';
@@ -25,7 +16,6 @@ import WindshieldTintSelect from './components/WindshieldTintSelect';
 import { FormContext } from './FormProvider';
 import { useUpdateEffect } from 'usehooks-ts';
 import NameInput from './components/NameInput';
-import { Download } from 'tabler-icons-react';
 import DownloadButton from './components/DownloadButton';
 
 const Form = () => {
@@ -38,7 +28,7 @@ const Form = () => {
 	}, [form.values]);
 
 	return (
-		<Box sx={{ maxWidth: 600 }}>
+		<Container sx={{ maxWidth: 600 }} p={24}>
 			<Stack>
 				<NameInput label="Name" {...form.getInputProps('name')} />
 				<CarSelect {...form.getInputProps('car')} />
@@ -76,7 +66,7 @@ const Form = () => {
 				</Accordion>
 				<DownloadButton />
 			</Stack>
-		</Box>
+		</Container>
 	);
 };
 
