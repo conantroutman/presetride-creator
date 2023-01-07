@@ -1,6 +1,6 @@
 import create from 'zustand';
 import produce from 'immer';
-import { persist } from 'zustand/middleware';
+import { persist, devtools } from 'zustand/middleware';
 import { cars } from '../games/mostwanted/cars';
 import { IPresetRide } from './types';
 
@@ -111,8 +111,8 @@ type Store = {
 	patchPresetRide: (payload: IPresetRide) => void;
 };
 
-const useStore = create<Store>(
-	persist((set) => ({
+const useStore = create<Store>()(
+	devtools((set) => ({
 		presetRides: [],
 		addPresetRide: (payload) =>
 			set(

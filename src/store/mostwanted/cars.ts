@@ -1,15 +1,27 @@
 import produce from 'immer';
 import create from 'zustand';
-import { persist } from 'zustand/middleware';
+import { devtools, persist } from 'zustand/middleware';
 
-type Store = {
-	cars: any[];
-	addCar: any;
-	removeCar: any;
+type CustomCar = {
+	brand: string;
+	model: string;
+	data: {
+		model: string;
+		frontend: string;
+		pvehicle: string;
+		spoilerType: string;
+		bodyKits: number;
+	};
 };
 
-const useCustomCarsStore = create<Store>(
-	persist((set) => ({
+type Store = {
+	cars: CustomCar[];
+	addCar: (car: CustomCar) => void;
+	removeCar: (model: string) => void;
+};
+
+const useCustomCarsStore = create<Store>()(
+	devtools((set) => ({
 		cars: [],
 		addCar: (payload) =>
 			set(
