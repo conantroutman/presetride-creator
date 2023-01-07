@@ -1,5 +1,5 @@
 import useCustomCarsStore from '@/store/mostwanted/cars';
-import { Button, Modal, Table } from '@mantine/core';
+import { Button, Container, Modal, Table } from '@mantine/core';
 import React, { useState } from 'react';
 import { Plus } from 'tabler-icons-react';
 import CarForm from './components/CarForm';
@@ -10,7 +10,7 @@ const CustomCars = () => {
 	const [opened, setOpened] = useState(false);
 
 	return (
-		<>
+		<Container>
 			<h2>Custom Cars</h2>
 			<p>
 				If you have any addon cars you would like to use, you can input them
@@ -38,7 +38,7 @@ const CustomCars = () => {
 			<Button leftIcon={<Plus />} onClick={() => setOpened(true)}>
 				Add Car
 			</Button>
-		</>
+		</Container>
 	);
 };
 
